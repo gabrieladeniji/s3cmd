@@ -1,0 +1,15 @@
+version: '2'
+services:
+  backup-mongo:
+    image: 'gabrielade/mongo_backup:010'
+    restart: always
+    environment:
+      TYPE: 'get'
+      S3_PATH: 's3://aws-assets/backup/mongo/'
+      LOCAL_PATH: '/app/restore/'
+      ACCESS_KEY: ''
+      HOST_BASE: 'ams3.aws.com'
+      SECRET_KEY: 's3.amazonaws.com'
+      HOST_BUCKET: '%(bucket)s.s3.amazonaws.com'
+      CHECK_SSL_HOSTNAME: 'True'
+      CHECK_SSL_CERTIFICATE: 'True'
