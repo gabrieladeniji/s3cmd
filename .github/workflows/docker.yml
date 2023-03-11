@@ -1,7 +1,8 @@
 on:
   push:
-    branches:
-      - '*'
+    paths:
+      - 'Dockerfile'
+      - 'src/main.sh'
 
 name: Docker Image
 
