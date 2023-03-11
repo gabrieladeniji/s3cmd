@@ -46,10 +46,10 @@ cp /.s3cfg /root/
 
 if [ "$TYPE" == "put" ]; then
   s3cmd put "$LOCAL_PATH" "$S3_PATH" --recursive
-  sleep 10 && echo "Done Uploading! 🥳🍕"
+  sleep 60 && echo "Done Uploading! 🥳🍕"
 elif [ "$TYPE" == "get" ]; then
   s3cmd get "$S3_PATH" "$LOCAL_PATH" --recursive
-  sleep 10 && echo "Done Downloading! 🥳🍺"
+  sleep 60 && echo "Done Downloading! 🥳🍺"
 fi
 
 
