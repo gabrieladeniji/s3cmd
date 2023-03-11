@@ -1,7 +1,7 @@
 version: '2'
 services:
   backup-mongo:
-    image: 'gabrielade/mongo_backup:010'
+    image: 'gabrielade/s3cmd:latest'
     restart: always
     environment:
       TYPE: 'get'
